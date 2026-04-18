@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathematics Teacher</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+}
+
+nav h2 {
+    color: cyan;
+}
+
+/* Navbar hover */
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: cyan;
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero span {
+    color: cyan;
+}
+
+.hero p {
+    margin-top: 10px;
+}
+
+/* Button hover */
+.hero button, .download-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: cyan;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover, .download-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Card hover */
+.card {
+    background: #1e293b;
+    margin: 15px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #334155;
+}
+
+/* Skills hover */
+.skills span {
+    display: inline-block;
+    background: #1e293b;
+    margin: 8px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: cyan;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Download Button */
+.download-btn {
+    margin-top: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero h1 {font-size: 28px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Mohammad Naved</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Hello, I'm <span>Naved</span></h1>
+    <p>Mathematics Teacher | Python Developer</p>
+    <button onclick="scrollToSection('teaching')">View Teaching</button>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a Mathematics teacher focused on conceptual clarity and logical thinking.
+            I continuously work on solving complex mathematical problems and improving students' problem-solving abilities.
+        </p>
+    </div>
+</section>
+
+<section id="teaching">
+    <h2>Teaching Experience</h2>
+
+    <div class="card">
+        <h3>Classes Taught</h3>
+        <p>Teaching Mathematics to Class 9–12 and B.Sc students.</p>
+    </div>
+
+    <div class="card">
+        <h3>Coaching Schedule</h3>
+        <p>Daily coaching from 3 PM to 9 PM with focus on concept clarity.</p>
+    </div>
+
+    <div class="card">
+        <h3>Subjects Covered</h3>
+        <p>Algebra, Calculus, Trigonometry, Vectors, and Advanced Problem Solving.</p>
+    </div>
+
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Algebra</span>
+        <span>Calculus</span>
+        <span>Trigonometry</span>
+        <span>Vector Mathematics</span>
+        <span>Web designing</span>
+        <span>Python Programming</span>
+    </div>
+</section>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:naved.ai.dev001[at]gmail[dot]com" style="color:cyan;">naved.ai.dev001[at]gmail[dot]com</a></p>
+
+    <!-- View CV Button -->
+    <a href="Cv.pdf" target="_blank">
+        <button class="download-btn">View CV</button>
+    </a>
+
+    <!-- Download CV Button -->
+    <a href="Cv.pdf" download>
+        <button class="download-btn">Download CV</button>
+    </a>
+</section>
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({behavior: "smooth"});
+}
+</script>
+</body>
+</html>
